@@ -80,15 +80,12 @@ img {
   max-width: 100%;
 }
 
-/* /сбрасываем стиль ссылок */
-.header a,
-.footer a,
-.portfolio a {
+a {
   text-decoration: none;
   color: inherit;
 }
 
-/* /применяем общие шрифты к всему хедеру */
+/* //Стили к хедеру */
 .header {
   padding-top: 24px;
   padding-bottom: 24px;
@@ -100,99 +97,99 @@ img {
   border-bottom: 1px solid var(--border-color);
 }
 
-/* /шрифты для лого применяется сразу к футеру и хедеру */
-.header .logo-link,
-.footer .logo-link {
+/* /logo */
+.logo {
   font-family: 'Raleway', sans-serif;
   font-weight: 700;
   font-size: 26px;
   line-height: 1.19;
   letter-spacing: 0.03em;
-  text-decoration: none;
   color: var(--text-accent-primary);
 }
 
-/* /применение второго цвета к части логотипа в хедере */
-.header .logo-color {
+.logo__dark {
   color: var(--text-header-logo);
 }
 
-/* /задаем цвет ссылок на список страниц */
-.header .page-link {
+.logo__light {
+  color: var(--text-footer-logo);
+}
+
+/* /navigation */
+.navigation__link {
   color: var(--text-main-primary);
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* /цвет ссылок на телефо и почту в хедере */
-.header-contacts .mail,
-.header-contacts .phone {
-  color: var(--text-main-secondary);
-}
-
-.header .container,
-.header .navigation,
-.header .header-contacts {
-  display: flex;
-  align-items: center;
-}
-
-.header .pages-list {
+.navigation__list {
   display: flex;
   margin-left: 93px;
 }
 
-.pages-list .page-item:not(:last-child) {
+.navigation__item {
+  position: relative;
+}
+
+.navigation__item:not(:last-child) {
   margin-right: 50px;
 }
-.header-contacts {
+
+/*  /Main-contacts*/
+.header__main-contacts {
   margin-left: auto;
-}
-.header-contacts .item:last-child {
-  margin-left: 50px;
+  gap: 50px;
 }
 
-.header-contacts .item {
+.main-contacts__item {
   display: flex;
-}
+  }
 
-.header-contacts .icon-phone {
-  margin-right: 10px;
-  width: 10px;
-  height: 16px;
-}
-
-.phone,
-.mail {
+.main-contacts__link {
   display: flex;
   align-items: center;
-  fill: var(--text-main-secondary);
-
-  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  color: var(--text-main-secondary);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.header-contacts .icon-mail {
+
+.main-contacts__icon{
   margin-right: 10px;
-  width: 16px;
-  height: 12px;
+    }
+
+.icon__phone,
+.icon__envelope {
+  fill: var(--text-main-secondary);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* /прописываем наведение для ссылок */
-.page-link:hover,
-.header-contacts .mail:hover,
-.header-contacts .phone:hover,
-.footer-contacts .mail:hover,
-.footer-contacts .phone:hover {
-  color: var(--main-hover-color);
+.main-contacts__link:hover .icon__phone,
+.main-contacts__link:hover .icon__envelope {
   fill: var(--main-hover-color);
+ }
+
+ .main-contacts__link:focus .icon__phone,
+.main-contacts__link:focus .icon__envelope {
+  fill: var(--main-hover-color);
+ }
+
+/* /Общие класы по хедеру */
+.header__container,
+.header__navigation,
+.main-contacts {
+  display: flex;
+  align-items: center;
 }
 
-.page-link:focus,
-.header-contacts .mail:focus,
-.header-contacts .phone:focus,
-.footer-contacts .mail:focus,
-.footer-contacts .phone:focus {
+.navigation__link:hover,
+.main-contacts__link:hover,
+.secondary-contacts__link:hover {
   color: var(--main-hover-color);
-  fill: var(--main-hover-color);
-}
+  }
+
+.navigation__link:focus,
+.main-contacts__link:focus,
+.secondary-contacts__link:focus {
+  color: var(--main-hover-color);
+ }
 
 .current::after {
   content: '';
@@ -203,10 +200,6 @@ img {
   background-color: var(--text-accent-primary);
   position: absolute;
   transform: translateY(28px);
-}
-
-.page-item {
-  position: relative;
 }
 
 /* //стили к мейн */
@@ -321,12 +314,12 @@ img {
 .team {
   background-color: var(--background-team);
 }
-.team .team-member {
+.team-list__member {
   background-color: var(--background-member-card);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
 }
-.team-title {
+.team__title {
   margin-bottom: 50px;
 
   font-size: 36px;
@@ -335,7 +328,7 @@ img {
   color: var(--text-main-primary);
 }
 
-.team-member .name {
+.team-list__name {
   color: var(--text-main-primary);
 
   font-weight: 500;
@@ -343,7 +336,7 @@ img {
   line-height: 1.19;
 }
 
-.team-member .specialization {
+.team-list__specialization {
   margin-top: 10px;
   margin-bottom: 16px;
 
@@ -351,7 +344,7 @@ img {
   line-height: 1.19;
 }
 
-.team-member .person {
+.team-list__person {
   padding-top: 30px;
   padding-bottom: 30px;
   text-align: center;
@@ -374,42 +367,9 @@ img {
 }
 
 /* //Стили к футеру */
-/* /применение второго цвета к части логотипа в футере */
-.footer .logo-color {
-  color: var(--text-footer-logo);
-}
 .footer {
   background-color: var(--background-footer);
   padding: 60px 0;
-}
-
-.footer-adress {
-  color: var(--text-footer-primary);
-  font-style: normal;
-}
-
-.footer-contacts .mail,
-.footer-contacts .phone {
-  color: var(--text-footer-secondary);
-}
-
-.footer-adress {
-  margin-top: 20px;
-}
-
-.footer-contacts {
-  margin-top: 9px;
-}
-
-.footer-adress .item:last-child {
-  margin-top: 9px;
-}
-.join-title {
-  margin-bottom: 20px;
-  color: var(--text-accent-secondary);
-  font-size: 14px;
-  line-height: 1.14;
-  text-transform: uppercase;
 }
 
 .footer .container {
@@ -417,30 +377,57 @@ img {
   align-items: baseline;
 }
 
-.section-links {
+/* /секция контактов - футер */
+.footer-adress {
+  color: var(--text-footer-primary);
+  font-style: normal;
+  margin-top: 20px;
+}
+
+.secondary-contacts {
+  margin-top: 9px;
+}
+
+.footer-contacts__link {
+  color: var(--text-footer-secondary);
+}
+
+.secondary-contacts_item:last-child {
+  margin-top: 9px;
+} 
+/* /сеция присоединяйтесь - Футер */
+.section-join {
   margin-left: 70px;
 }
 
+.section-join__title {
+  margin-bottom: 20px;
+  color: var(--text-accent-secondary);
+  font-size: 14px;
+  line-height: 1.14;
+  text-transform: uppercase;
+}
+
 /* /стили к форме в футере */
-.footer-form {
+.subscribe {
   display: flex;
   flex-direction: column;
   margin-left: 93px;
 }
 
-.footer-form-title {
+.subscribe__title {
   text-transform: uppercase;
   color: var(--text-footer-primary);
   line-height: 1.14;
   margin-bottom: 20px;
 }
 
-.footer-form-field {
+.subscribe__field {
   display: flex;
   gap: 12px;
 }
 
-.footer-form-input {
+.subscribe__input {
   width: 358px;
   background-color: transparent;
   padding: 15px 16px;
@@ -451,7 +438,7 @@ img {
   border-radius: 4px;
 }
 
-.footer-form-input::placeholder {
+.subscribe__input::placeholder {
   font-size: 16px;
   line-height: 1.25;
   color: var(--text-footer-secondary);
@@ -476,10 +463,6 @@ img {
   border: none;
 }
 
-.footer-form-icon {
-  width: 24px;
-  height: 24px;
-}
 
 /* // стили к странице портфолио */
 /* / стили к фильтру с кнопками */
@@ -618,6 +601,7 @@ img {
   border-radius: 4px;
 }
 
+/* /sosial links */
 .social-links {
   display: flex;
   gap: 10px;
@@ -625,7 +609,7 @@ img {
   justify-content: center;
 }
 
-.social-link {
+.social-links__link {
   width: 44px;
   height: 44px;
   border-radius: 50%;
@@ -635,16 +619,35 @@ img {
 
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.icon-social {
+.social-links__icon {
   display: block;
   width: 20px;
   height: 20px;
   fill: var(--svg-color);
 }
-.team .icon-social {
+.social-links__icon--team {
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+.social-links__link--footer {
+  background: rgba(255, 255, 255, 0.1);
+}
+.social-links__icon--footer {
+  fill: var(--text-accent-secondary);
+}
+.social-links__link:hover,
+.social-links__link:focus {
+  background-color: var(--main-hover-color);
+}
+
+.social-links__link:hover .social-links__icon--team,
+.social-links__link:focus .social-links__icon--team {
+  fill: var(--text-accent-secondary);
+}
+
+
+
+/* /customer icons */
 .icon-customer {
   display: block;
   width: 106px;
@@ -674,22 +677,8 @@ img {
   fill: var(--main-hover-color);
 }
 
-.footer .social-link {
-  background: rgba(255, 255, 255, 0.1);
-}
-.footer .icon-social {
-  fill: var(--text-accent-secondary);
-}
 
-.social-link:hover,
-.social-link:focus {
-  background-color: var(--main-hover-color);
-}
 
-.team .social-link:hover .icon-social,
-.team .social-link:focus .icon-social {
-  fill: var(--text-accent-secondary);
-}
 /* //modal window */
 .backdrop {
   position: fixed;
