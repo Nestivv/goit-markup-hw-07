@@ -142,7 +142,7 @@ a {
 
 .main-contacts__item {
   display: flex;
-  }
+}
 
 .main-contacts__link {
   display: flex;
@@ -151,9 +151,9 @@ a {
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.main-contacts__icon{
+.main-contacts__icon {
   margin-right: 10px;
-    }
+}
 
 .icon__phone,
 .icon__envelope {
@@ -164,12 +164,12 @@ a {
 .main-contacts__link:hover .icon__phone,
 .main-contacts__link:hover .icon__envelope {
   fill: var(--main-hover-color);
- }
+}
 
- .main-contacts__link:focus .icon__phone,
+.main-contacts__link:focus .icon__phone,
 .main-contacts__link:focus .icon__envelope {
   fill: var(--main-hover-color);
- }
+}
 
 /* /Общие класы по хедеру */
 .header__container,
@@ -183,13 +183,13 @@ a {
 .main-contacts__link:hover,
 .secondary-contacts__link:hover {
   color: var(--main-hover-color);
-  }
+}
 
 .navigation__link:focus,
 .main-contacts__link:focus,
 .secondary-contacts__link:focus {
   color: var(--main-hover-color);
- }
+}
 
 .current::after {
   content: '';
@@ -278,7 +278,7 @@ a {
 }
 
 /* /стили к секции чем мы занимаемся */
-.our-description .description-title {
+.description__title {
   margin-bottom: 50px;
 
   font-size: 36px;
@@ -291,11 +291,11 @@ a {
   padding-bottom: 94px;
 }
 
-.our-description .item {
+.description-list__item {
   position: relative;
 }
 
-.title-description {
+.description-list__title {
   position: absolute;
   width: 100%;
   height: 70px;
@@ -354,7 +354,7 @@ a {
 }
 
 /* /Стили наши клиенты */
-.customer-title {
+.customer__title {
   margin-bottom: 50px;
   font-size: 36px;
   line-height: 1.17;
@@ -364,6 +364,35 @@ a {
 .customer-list {
   display: flex;
   gap: 30px;
+}
+
+.customer-list__icon {
+  display: block;
+  width: 106px;
+  height: 60px;
+  fill: var(--svg-color);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.customer-list__link {
+  width: 170px;
+  height: 92px;
+  border: 1px solid var(--svg-color);
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.customer-list__link:hover,
+.customer-list__link:focus {
+  border: 1px solid var(--main-hover-color);
+}
+
+.customer-list__link:hover .customer-list__icon,
+.customer-list__link:focus .customer-list__icon {
+  fill: var(--main-hover-color);
 }
 
 /* //Стили к футеру */
@@ -392,9 +421,9 @@ a {
   color: var(--text-footer-secondary);
 }
 
-.secondary-contacts_item:last-child {
+.secondary-contacts__item:last-child {
   margin-top: 9px;
-} 
+}
 /* /сеция присоединяйтесь - Футер */
 .section-join {
   margin-left: 70px;
@@ -444,8 +473,7 @@ a {
   color: var(--text-footer-secondary);
 }
 
-.footer-btn {
-  display: flex;
+.subscribe__btn {
   gap: 10px;
   padding: 10px 28px;
   align-items: center;
@@ -454,15 +482,11 @@ a {
   font-size: 16px;
   line-height: 1.88;
   letter-spacing: 0.06em;
-  cursor: pointer;
 
   color: var(--text-footer-primary);
   background-color: var(--background-hero-button);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-  border-radius: 4px;
-  border: none;
 }
-
 
 /* // стили к странице портфолио */
 /* / стили к фильтру с кнопками */
@@ -645,39 +669,7 @@ a {
   fill: var(--text-accent-secondary);
 }
 
-
-
 /* /customer icons */
-.icon-customer {
-  display: block;
-  width: 106px;
-  height: 60px;
-  fill: var(--svg-color);
-  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.customer-link {
-  width: 170px;
-  height: 92px;
-  border: 1px solid var(--svg-color);
-  border-radius: 4px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-.customer-link:hover,
-.customer-link:focus {
-  border: 1px solid var(--main-hover-color);
-}
-
-.customer-link:hover .icon-customer,
-.customer-link:focus .icon-customer {
-  fill: var(--main-hover-color);
-}
-
-
 
 /* //modal window */
 .backdrop {
@@ -888,4 +880,11 @@ a {
 
 .register-form .text {
   user-select: none;
+}
+
+.btn {
+  display: inline-flex;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
 }
