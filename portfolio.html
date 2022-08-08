@@ -23,6 +23,7 @@
     />
 
     <!-- ? подключаем css -->
+    <link rel="stylesheet" href="./css/main.min.css" />
     <link rel="stylesheet" href="./css/style.css" />
   </head>
 
@@ -35,10 +36,10 @@
 
           <ul class="navigation__list list">
             <li class="navigation__item">
-              <a href="./index.html" class="navigation__link current">Студия</a>
+              <a href="./index.html" class="navigation__link">Студия</a>
             </li>
             <li class="navigation__item">
-              <a href="./portfolio.html" class="navigation__link">Портфолио</a>
+              <a href="./portfolio.html" class="navigation__link current">Портфолио</a>
             </li>
             <li class="navigation__item"><a href="" class="navigation__link">Контакты</a></li>
           </ul>
@@ -67,231 +68,231 @@
     <!-- // main -->
     <main>
       <!-- / Секция "наши проекты" -->
-      <section class="portfolio section">
-        <div class="container">
+      <section class="portfolio-section section">
+        <div class="portfolio container">
           <h1 class="hidden">Наши проекты</h1>
 
           <ul class="filter-list list">
-            <li class="btn-item">
-              <button type="button" class="filter-button ch">Все</button>
+            <li class="filter-list__item">
+              <button type="button" class="btn filter-button">Все</button>
             </li>
-            <li class="btn-item">
-              <button type="button" class="filter-button">Веб-сайты</button>
+            <li class="filter-list__item">
+              <button type="button" class="btn filter-button">Веб-сайты</button>
             </li>
-            <li class="btn-item">
-              <button type="button" class="filter-button">Приложения</button>
+            <li class="filter-list__item">
+              <button type="button" class="btn filter-button">Приложения</button>
             </li>
-            <li class="btn-item">
-              <button type="button" class="filter-button">Дизайн</button>
+            <li class="filter-list__item">
+              <button type="button" class="btn filter-button">Дизайн</button>
             </li>
-            <li class="btn-item">
-              <button type="button" class="filter-button">Маркетинг</button>
+            <li class="filter-list__item">
+              <button type="button" class="btn filter-button">Маркетинг</button>
             </li>
           </ul>
 
           <ul class="portfolio-list list grid">
-            <li class="portfolio-card grid-item">
-              <a href="" class="portfolio-link">
-                <div class="thumb">
+            <li class="portfolio-list__item grid-item">
+              <a href="" class="portfolio-list__link">
+                <div class="portfolio-list__thumb">
                   <img
                     src="./images/img-portfolio/tehnocrack.jpg"
                     alt="сотрудники компании Технокряк на мониторе ноутбука"
                     width="370"
                   />
-                  <div class="floated-description">
-                    <p class="floated-text">
+                  <div class="portfolio-list__floated-description">
+                    <p class="portfolio-list__floated-text">
                       Ресурс предлагает комплексные предложения с разным уровнем функционала и
                       сервисов. Все это позволит посетителю получить исчерпывающие сведения о
                       компании или частном лице.
                     </p>
                   </div>
                 </div>
-                <div class="card-description">
-                  <h2 class="title">Технокряк</h2>
+                <div class="portfolio-list__card-description">
+                  <h2 class="portfolio-list__title">Технокряк</h2>
                   <p>Веб-сайт</p>
                 </div>
               </a>
             </li>
 
-            <li class="portfolio-card grid-item">
-              <a href="" class="portfolio-link">
-                <div class="thumb">
+            <li class="portfolio-list__item grid-item">
+              <a href="" class="portfolio-list__link">
+                <div class="portfolio-list__thumb">
                   <img
                     src="./images/img-portfolio/poster.jpg"
                     alt="постер баскетбольного матча команд New Orlean vs Golden Star"
                     width="370"
                   />
-                  <div class="floated-description">
-                    <p class="floated-text">
+                  <div class="portfolio-list__floated-description">
+                    <p class="portfolio-list__floated-text">
                       Ресурс предлагает комплексные предложения с разным уровнем функционала и
                       сервисов. Все это позволит посетителю получить исчерпывающие сведения о
                       компании или частном лице.
                     </p>
                   </div>
                 </div>
-                <div class="card-description">
-                  <h2 class="title">Постер <span lang="en">New Orlean vs Golden Star</span></h2>
+                <div class="portfolio-list__card-description">
+                  <h2 class="portfolio-list__title">Постер <span lang="en">New Orlean vs Golden Star</span></h2>
                   <p>Дизайн</p>
                 </div>
               </a>
             </li>
 
-            <li class="portfolio-card grid-item">
-              <a href="" class="portfolio-link">
-                <div class="thumb">
+            <li class="portfolio-list__item grid-item">
+              <a href="" class="portfolio-list__link">
+                <div class="portfolio-list__thumb">
                   <img
                     src="./images/img-portfolio/restaurant.jpg"
                     alt="Логотип ресторана Seafood"
                     width="370"
                   />
-                  <div class="floated-description">
-                    <p class="floated-text">
+                  <div class="portfolio-list__floated-description">
+                    <p class="portfolio-list__floated-text">
                       Ресурс предлагает комплексные предложения с разным уровнем функционала и
                       сервисов. Все это позволит посетителю получить исчерпывающие сведения о
                       компании или частном лице.
                     </p>
                   </div>
                 </div>
-                <div class="card-description">
-                  <h2 class="title">Ресторан <span lang="en">Seafood</span></h2>
+                <div class="portfolio-list__card-description">
+                  <h2 class="portfolio-list__title">Ресторан <span lang="en">Seafood</span></h2>
                   <p>Приложение</p>
                 </div>
               </a>
             </li>
 
-            <li class="portfolio-card grid-item">
-              <a href="" class="portfolio-link">
-                <div class="thumb">
+            <li class="portfolio-list__item grid-item">
+              <a href="" class="portfolio-list__link">
+                <div class="portfolio-list__thumb">
                   <img
                     src="./images/img-portfolio/project-prime.jpg"
                     alt="Картинка - наушники"
                     width="370"
                   />
-                  <div class="floated-description">
-                    <p class="floated-text">
+                  <div class="portfolio-list__floated-description">
+                    <p class="portfolio-list__floated-text">
                       Ресурс предлагает комплексные предложения с разным уровнем функционала и
                       сервисов. Все это позволит посетителю получить исчерпывающие сведения о
                       компании или частном лице.
                     </p>
                   </div>
                 </div>
-                <div class="card-description">
-                  <h2 class="title">Проект <span lang="en">Prime</span></h2>
+                <div class="portfolio-list__card-description">
+                  <h2 class="portfolio-list__title">Проект <span lang="en">Prime</span></h2>
                   <p>Маркетинг</p>
                 </div>
               </a>
             </li>
 
-            <li class="portfolio-card grid-item">
-              <a href="" class="portfolio-link">
-                <div class="thumb">
+            <li class="portfolio-list__item grid-item">
+              <a href="" class="portfolio-list__link">
+                <div class="portfolio-list__thumb">
                   <img
                     src="./images/img-portfolio/project-boxes.jpg"
                     alt="картинка с коробками"
                     width="370"
                   />
-                  <div class="floated-description">
-                    <p class="floated-text">
+                  <div class="portfolio-list__floated-description">
+                    <p class="portfolio-list__floated-text">
                       Ресурс предлагает комплексные предложения с разным уровнем функционала и
                       сервисов. Все это позволит посетителю получить исчерпывающие сведения о
                       компании или частном лице.
                     </p>
                   </div>
                 </div>
-                <div class="card-description">
-                  <h2 class="title">Проект Boxes</h2>
+                <div class="portfolio-list__card-description">
+                  <h2 class="portfolio-list__title">Проект Boxes</h2>
                   <p>Приложение</p>
                 </div>
               </a>
             </li>
 
-            <li class="portfolio-card grid-item">
-              <a href="" class="portfolio-link">
-                <div class="thumb">
+            <li class="portfolio-list__item grid-item">
+              <a href="" class="portfolio-list__link">
+                <div class="portfolio-list__thumb">
                   <img
                     src="./images/img-portfolio/project-boxes.jpg"
                     alt="картинка с коробками"
                     width="370"
                   />
-                  <div class="floated-description">
-                    <p class="floated-text">
+                  <div class="portfolio-list__floated-description">
+                    <p class="portfolio-list__floated-text">
                       Ресурс предлагает комплексные предложения с разным уровнем функционала и
                       сервисов. Все это позволит посетителю получить исчерпывающие сведения о
                       компании или частном лице.
                     </p>
                   </div>
                 </div>
-                <div class="card-description">
-                  <h2 class="title" lang="en">Inspiration has no Borders</h2>
+                <div class="portfolio-list__card-description">
+                  <h2 class="portfolio-list__title" lang="en">Inspiration has no Borders</h2>
                   <p>Веб-сайт</p>
                 </div>
               </a>
             </li>
 
-            <li class="portfolio-card grid-item">
-              <a href="" class="portfolio-link">
-                <div class="thumb">
+            <li class="portfolio-list__item grid-item">
+              <a href="" class="portfolio-list__link">
+                <div class="portfolio-list__thumb">
                   <img
                     src="./images/img-portfolio/limited-edition.jpg"
                     alt="картинка развернутой книги"
                     width="370"
                   />
-                  <div class="floated-description">
-                    <p class="floated-text">
+                  <div class="portfolio-list__floated-description">
+                    <p class="portfolio-list__floated-text">
                       Ресурс предлагает комплексные предложения с разным уровнем функционала и
                       сервисов. Все это позволит посетителю получить исчерпывающие сведения о
                       компании или частном лице.
                     </p>
                   </div>
                 </div>
-                <div class="card-description">
-                  <h2 class="title">Издание <span lang="en">Limited Edition</span></h2>
+                <div class="portfolio-list__card-description">
+                  <h2 class="portfolio-list__title">Издание <span lang="en">Limited Edition</span></h2>
                   <p>Дизайн</p>
                 </div>
               </a>
             </li>
 
-            <li class="portfolio-card grid-item">
-              <a href="" class="portfolio-link">
-                <div class="thumb">
+            <li class="portfolio-list__item grid-item">
+              <a href="" class="portfolio-list__link">
+                <div class="portfolio-list__thumb">
                   <img
                     src="./images/img-portfolio/project-lab.jpg"
                     alt="бирка компании Lab"
                     width="370"
                   />
-                  <div class="floated-description">
-                    <p class="floated-text">
+                  <div class="portfolio-list__floated-description">
+                    <p class="portfolio-list__floated-text">
                       Ресурс предлагает комплексные предложения с разным уровнем функционала и
                       сервисов. Все это позволит посетителю получить исчерпывающие сведения о
                       компании или частном лице.
                     </p>
                   </div>
                 </div>
-                <div class="card-description">
-                  <h2 class="title">Проект <span lang="en">LAB</span></h2>
+                <div class="portfolio-list__card-description">
+                  <h2 class="portfolio-list__title">Проект <span lang="en">LAB</span></h2>
                   <p>Маркетинг</p>
                 </div>
               </a>
             </li>
 
-            <li class="portfolio-card grid-item">
-              <a href="" class="portfolio-link">
-                <div class="thumb">
+            <li class="portfolio-list__item grid-item">
+              <a href="" class="portfolio-list__link">
+                <div class="portfolio-list__thumb">
                   <img
                     src="./images/img-portfolio/growing-business.jpg"
                     alt="на картинке ноутбук с открытым сайтом"
                     width="370"
                   />
-                  <div class="floated-description">
-                    <p class="floated-text">
+                  <div class="portfolio-list__floated-description">
+                    <p class="portfolio-list__floated-text">
                       Ресурс предлагает комплексные предложения с разным уровнем функционала и
                       сервисов. Все это позволит посетителю получить исчерпывающие сведения о
                       компании или частном лице.
                     </p>
                   </div>
                 </div>
-                <div class="card-description">
-                  <h2 class="title" lang="en">Growing Business</h2>
+                <div class="portfolio-list__card-description">
+                  <h2 class="portfolio-list__title" lang="en">Growing Business</h2>
                   <p>Приложение</p>
                 </div>
               </a>
